@@ -1,0 +1,29 @@
+Application :
+Das Projekt besteht aus einem Teensy 4.0 gesteuerten Roboter auf welchem sich ein Raspberry Pi | Die Anwendung besteht aus einer GUI , welche auf einem belibigen Windows PC ausgefürt werden kann.
+Das Projekt soll dementsprechend eine Installations Anleitung und eine Installations datei beeinhalten welche das Projekt installiert.
+Dieses Programm soll Per TCP verbindung innerhalb eines localen Hotspot, welcher vom PC bereitgestellt wird und in welchem sich ein Raspberry Pi Zero W.
+Der Raspberry soll sich automatisch in dem Hotspot anmelden und hierdurch Anordnung bzw. Dateien (.hex als Software file für den teensy) erhalten ,welche dann weiter verarbeitet werden. 
+Der Raspberry wird per usb kabel mit dem teensy dauerhaft verbunden und kann so per serielle mit diesem kommunizieren. 
+
+Folgende Befehle werden vom Teensy 4.0 ünterstützt
+
+Communikation Protokoll:
+  - Buttons
+    "WBion" →> schalltet Button nummer 1 auf an
+    "WB1of" →> schalltet Button nummer 1 auf aus
+    "WB2on" →> schalltet Button nummer 2 auf an (
+    "WB2of"→> schalltet Button nummer 2 auf aus (Write Button 2 off)
+    "WB3on" →> schalltet Button nummer 3 auf an (Write Button 3 on )
+    "WB3of"→> schalltet Button nummer 3 auf aus (Write Button 3 off)
+  - Schalters
+    "WS1on" -> schalltet Schalter nummer 1 auf an ( Write Schalter 1 on )
+    "WS1of" -> schalltet Schalter nummer 1 auf aus ( Write Schalter 1 off)
+    "WS2on" →> schalltet Schalter nummer 2auf an (Write Schalter 2 on )
+    "WS2of"→> schalltet Schalter nummer 2 auf aus (Write Schalter 2 off)
+    "WS3on"→ schalltet Schalter nummer 3 auf an (Write Schalter 3on)
+    "WS3of" →> schalltet Schalter nummer 3 auf aus ( Write Schalter 3 off )
+  - Calibration
+    "WC000" → calibriert den internen Kompass ( Write Calibration 000 ) die nullen werden genutzt um den formfaktor zu behalten
+
+Zusätzlich soll es die möglichkeit geben per datei pfad auswahl eine .hex datei welche per tcp an den Raspberry gesendet wird auf den 
+teensy zu flashen. Dies wird per teensy loader cli durchgefürt.
