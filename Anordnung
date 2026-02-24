@@ -16,6 +16,8 @@ Communikation Protokoll:
     "WB3on" →> schalltet Button nummer 3 auf an (Write Button 3 on )
     "WB3of"→> schalltet Button nummer 3 auf aus (Write Button 3 off)
   - Schalters
+    "WSSon" -> Start Schalter auf an ( Write Schalter Start on )
+    "WSSof" -> Start Schalter auf aus ( Write Schalter Start off )
     "WS1on" -> schalltet Schalter nummer 1 auf an ( Write Schalter 1 on )
     "WS1of" -> schalltet Schalter nummer 1 auf aus ( Write Schalter 1 off)
     "WS2on" →> schalltet Schalter nummer 2auf an (Write Schalter 2 on )
@@ -38,10 +40,23 @@ Erstelle zusätzlich eine Bedinuns anleitung für anwender. (Markdown)
 Erstelle zudem zuerst eine Task datei (.md) um einen detaillierten Laufplan zur bearbeitung des Projekts zu erstellen. 
 Dieser Laufplan soll anschließend durchgefürt werden.
 
+Lege Key verbindungen an:
+alt+u => Upload auf teensy ( soll auch im Hintergrund ausgefürt werden ohne GUI -> Backend dauer aktiv mit windows autostart )
+alt+d => Starte die GUI
+
+
+
 Aufbau:
 
 Teensy ist per usb an den Raspberry angeschlossen und kommuniziert somit per serial mit diesem.
 Der Raspberry wird als gerät in den vom PC bereitgestellten Hotspot angemeldet.
 Über diese Hotspot verbindung werden alle Informationen und dateien per tcp oder per udp versendet ( verwende das besser geeignete modell )
-Der PC fürt eine GUI aus ( mit Py backend ) welche sich um die Kontrolle der Nutzer eingaben und das anzeigen der Schalter und buttons kummert. ( Calibration soll als druckknopf ausgefürt werden )
+Der PC fürt eine GUI aus ( mit Py backend ) welche sich um die Kontrolle der Nutzer eingaben und das anzeigen der Schalter und buttons kummert. 
+( Calibration soll als druckknopf ausgefürt werden )
+
+
+Spätere Erweiterungen : ( beachte diese um später eine einfache integration und erweiterung im prozess zu ermöglichen. )
+
+- unterstützung eines 2ten Raspberry/teensy setups um mehrere Roboter simultan zu verwalten ( jeweils mit eigener code base )
+
 
