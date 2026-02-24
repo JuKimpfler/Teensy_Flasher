@@ -27,3 +27,21 @@ Communikation Protokoll:
 
 Zusätzlich soll es die möglichkeit geben per datei pfad auswahl eine .hex datei welche per tcp an den Raspberry gesendet wird auf den 
 teensy zu flashen. Dies wird per teensy loader cli durchgefürt.
+
+Nutze eine Python Basis um das Backend bereit zustellen. Nutze eine modernere Programmiersprache für das Frontend ( GUI ). 
+Auf dem Raspberry wird ein Headless System verwendet. Verwende hierbei auch Python als Backend, ein extra Frontend wird nicht benötigt. 
+Erstelle sowohl für Den Raspberry als auch für den PC jeweils ein setup Programm welches alle nötigen 
+istallationen und dateien anlegt bzw. verknüpft. Achte auch auf Autostart Protokolle.
+
+Erstelle zusätzlich eine Bedinuns anleitung für anwender. (Markdown)
+
+Erstelle zudem zuerst eine Task datei (.md) um einen detaillierten Laufplan zur bearbeitung des Projekts zu erstellen. 
+Dieser Laufplan soll anschließend durchgefürt werden.
+
+Aufbau:
+
+Teensy ist per usb an den Raspberry angeschlossen und kommuniziert somit per serial mit diesem.
+Der Raspberry wird als gerät in den vom PC bereitgestellten Hotspot angemeldet.
+Über diese Hotspot verbindung werden alle Informationen und dateien per tcp oder per udp versendet ( verwende das besser geeignete modell )
+Der PC fürt eine GUI aus ( mit Py backend ) welche sich um die Kontrolle der Nutzer eingaben und das anzeigen der Schalter und buttons kummert. ( Calibration soll als druckknopf ausgefürt werden )
+
